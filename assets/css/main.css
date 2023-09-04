@@ -112,11 +112,6 @@ body{
     float: right;
 }
 
-iframe {
-    width: 600px;
-    height: 350px;
-}
-
 @media only screen and (max-width: 1830px) {
     .menu{
         float: none;
