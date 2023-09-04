@@ -11,6 +11,36 @@ h1{
     margin: 0;
     text-size-adjust: none;
 }
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 50%;
+    padding: 0 4px;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+.name {
+    padding-bottom: 4rem;
+    margin: 0;
+}
+
+body {
+    padding: 2rem;
+    margin: 0;
+    
+}
+
+.menu {
+    height: 100%;
+    position: fixed;
+}
 
 h3{
     font-family: 'Courier New', Courier, monospace;
@@ -30,15 +60,6 @@ h4{
 p{
     font-family: 'Courier New', Courier, monospace;
     text-size-adjust: none;
-}
-
-.cs .content p{
-    font-size: 14px;
-}
-
-body{
-    margin:0;
-    padding: 2.5rem;
 }
 
 .footer{
@@ -65,54 +86,31 @@ body{
     color:grey;
 }
 
-.art .content{
-    margin: 0;
-    padding: 0;
+.content{
     float: right;
 }
-
-.cs .content{
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-
-.menu{
-    float: left;
-    position: fixed;
-}
-
-.misc .content{
-    float: right;
-}
-.cs .content .left{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-right: 1rem;
-    float: left;
-    padding-left: 2rem;
-}
-.left{
-    padding-right: 1rem;
+  
+.left {
+    vertical-align: middle;
     float: left;
 }
-
-.right{
-    padding-left: 1rem;
+.right {
+    vertical-align: middle;
     float: right;
 }
-
-.art img{
-    margin: 2rem auto;
+.content .works {
     display: block;
+    padding: 1rem;
+    border: 0px;
+}
+.websitecreation {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 0px;
 }
 
-.single{
-    margin: 0;
-    float: right;
-}
 
-@media only screen and (max-width: 1830px) {
+/*@media only screen and (max-width: 1830px) {
     .menu{
         float: none;
         padding-bottom: 3rem;
