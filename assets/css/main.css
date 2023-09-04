@@ -6,7 +6,7 @@ a {
 
 h1{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 60px;
+    font-size: 70px;
     color:#79B473;
     margin: 0;
     text-size-adjust: none;
@@ -27,7 +27,7 @@ h1{
   }
 
 .name {
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
     margin: 0;
 }
 
@@ -51,15 +51,14 @@ h3{
 
 h4{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-size: 20px;
     margin:0;
-    padding:0;
+    padding:0.5rem;
     text-size-adjust: none;
 }
 
 p{
     font-family: 'Courier New', Courier, monospace;
-    text-size-adjust: none;
 }
 
 .footer{
@@ -67,7 +66,7 @@ p{
     position: fixed;     
     bottom: 3rem; 
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     text-size-adjust: none;
 }
 
@@ -78,9 +77,10 @@ p{
     font-weight: bold;
     margin:0;
     padding:0;
-    font-size: 16px;
+    font-size: 18px;
     text-size-adjust: none;
 }
+
 
 .links:hover{
     color:grey;
@@ -107,6 +107,11 @@ p{
     padding-left: 2rem;
     padding-right: 2rem;
     border: 0px;
+}
+.about {
+    position: fixed;
+    right: 38rem;
+    top: 20rem;
 }
 
 
