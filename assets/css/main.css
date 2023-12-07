@@ -5,8 +5,8 @@ a {
 }
 
 h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 70px;
+    font-family: 'Syne';
+    font-size: 87.5px;
     color:#79B473;
     margin: 0;
     text-size-adjust: none;
@@ -43,44 +43,43 @@ body {
 }
 
 h3{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Syne';
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     text-size-adjust: none;
 }
 
 h4{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-family: 'Syne';
+    font-size: 25px;
     margin:0;
     padding:0.5rem;
     text-size-adjust: none;
 }
 
 p{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Syne';
 }
 
 .footer{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Syne';
     position: fixed;     
     bottom: 3rem; 
     width: 100%;
-    font-size: 16px;
+    font-size: 20px;
     text-size-adjust: none;
 }
 
 .links{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Syne';
     color: hsl(300, 100%, 25%);
     font-style: italic;
     font-weight: bold;
     margin:0;
     padding:0;
-    font-size: 18px;
+    font-size: 22.5px;
     text-size-adjust: none;
 }
-
 
 .links:hover{
     color:grey;
@@ -100,10 +99,11 @@ p{
 }
 .content .works {
     display: block;
-    padding: 1rem;
+    padding-left: 1rem;
     border: 0px;
 }
 .websitecreation {
+    padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border: 0px;
@@ -111,7 +111,7 @@ p{
 .about {
     position: fixed;
     right: 35rem;
-    top: 20rem;
+    top: 15rem;
 }
 
 
