@@ -1,5 +1,5 @@
 {
-  "homepage": "https://graced0.github.io/home/",
+  "homepage": "https://graced0.github.io/",
   "name": "graced0.github.io",
   "private": false,
   "version": "0.0.0",
@@ -7,11 +7,9 @@
   "scripts": {
     "start": "react-script start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "vite build"
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
