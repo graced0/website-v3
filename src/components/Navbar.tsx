@@ -8,10 +8,18 @@ function Navbar({ sections }: Props) {
   const [currSection, setCurrSection] = useState(-1);
 
   return (
-    <>
-      <nav id="navbar" style={{ fontFamily: "Syne" }}>
-        <h1 className="m-5 p-0 display-2 fw-bold">grace do</h1>
-        <div className="nav flex-column m-5 fs-4 p-0">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        fontFamily: "Syne",
+      }}
+      className="nav-text"
+    >
+      <h1 className="display-2 fw-bold">grace do</h1>
+      <nav className="navbar-text navbar-default">
+        <div className="nav flex-column fs-4 p-0">
           {sections.map((sections, index) => (
             <a
               href={"#" + sections}
@@ -28,7 +36,10 @@ function Navbar({ sections }: Props) {
           ))}
         </div>
       </nav>
-    </>
+      <footer className="fs-5" style={{ marginTop: "auto" }}>
+        © 2019 - 2024
+      </footer>
+    </div>
   );
 }
 
