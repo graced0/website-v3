@@ -5,13 +5,27 @@ function App() {
 
   return (
     <>
-      <div className="fixed-top">
+      <div className="position-fixed">
         <Navbar sections={navNames} />
       </div>
       <div>
         <body>
-          <p className="pt-5 text-center bg-light">
-            {" "}
+          <p
+            className="m-0 text-center bg-secondary bg-opacity-10"
+            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+          >
+            hey, my name is grace do.
+          </p>
+          <p
+            className="m-0 text-center bg-success bg-opacity-50"
+            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+          >
+            hey, my name is grace do.
+          </p>
+          <p
+            className="m-0 text-center bg-info bg-opacity-50"
+            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+          >
             hey, my name is grace do.
           </p>
         </body>
