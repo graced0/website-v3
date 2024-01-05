@@ -1,33 +1,38 @@
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 function App() {
-  let navNames = ["visual media", "projects", "résumé"];
+  const windowSize = useWindowSize();
+  let navNames = ["résumé", "visual media", "projects"];
 
   return (
     <>
-      <div className="position-fixed">
-        <Navbar sections={navNames} />
-      </div>
       <div>
-        <body>
-          <p
-            className="m-0 text-center bg-secondary bg-opacity-10"
-            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+        <body className="position-relative">
+          <div className="position-fixed bg-white h-100 shadow-lg">
+            <Navbar sections={navNames} />
+          </div>
+          <div
+            id="résumé"
+            className="m-0 bg-info bg-opacity-50"
+            style={{ height: windowSize.height }}
           >
             hey, my name is grace do.
-          </p>
-          <p
-            className="m-0 text-center bg-success bg-opacity-50"
-            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+          </div>
+          <div
+            id="visual media"
+            className="m-0 bg-secondary bg-opacity-10"
+            style={{ height: windowSize.height }}
           >
             hey, my name is grace do.
-          </p>
-          <p
-            className="m-0 text-center bg-info bg-opacity-50"
-            style={{ paddingTop: "500px", paddingBottom: "500px" }}
+          </div>
+          <div
+            id="projects"
+            className="m-0 bg-success bg-opacity-50"
+            style={{ height: windowSize.height }}
           >
             hey, my name is grace do.
-          </p>
+          </div>
         </body>
       </div>
     </>
