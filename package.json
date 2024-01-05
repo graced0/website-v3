@@ -1,17 +1,17 @@
 {
-  "homepage": "https://graced0.github.io/",
+  "homepage": "https://graced0.github.io/home/",
   "name": "graced0.github.io",
   "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start" : "react-script start",
+    "start": "react-script start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
@@ -29,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
+    "react-router-dom": "^6.21.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
