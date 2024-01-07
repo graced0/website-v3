@@ -2,16 +2,16 @@ import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 
 function App() {
-  let navNames = ["résumé", "visual media", "projects"];
+  let navNames = ["about", "visual media", "projects"];
 
   return (
     <>
       <div>
-        <body>
-          <div className="position-fixed bg-white h-100 shadow-lg">
+        <body className="d-flex"> 
+          <div className="bg-white">
             <Navbar sections={navNames} />
           </div>
-          <div className="content-container">
+          <div className="flex-grow-1 content-container"> 
             <Content />
           </div>
         </body>

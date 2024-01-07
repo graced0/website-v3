@@ -1,27 +1,32 @@
-import "/src/App.css";
+import "/src/style.css";
+import About from "./About";
+import VisualMedia from "./VisualMedia";
+import Projects from "./Projects";
+
+
 
 function Content() {
   return (
     <>
-      <div id="résumé" 
-        className="m-0 purple" 
-        style={{ minHeight: "100vh" }}
+      <div id="about" 
+        className="off-white" 
+        style={{ minHeight: "100vh"}}
       >
-        <p>hey, my name is grace do.</p>
+        <About />
       </div>
       <div
         id="visual media"
-        className="m-0 off-white"
+        className="purple"
         style={{ minHeight: "100vh" }}
       >
-        hey, my name is grace do.
+        <VisualMedia />
       </div>
       <div
         id="projects"
-        className="m-0 green"
+        className="green"
         style={{ minHeight: "100vh" }}
       >
-        <p>hey, my name is grace do.</p>
+        <Projects />
       </div>
     </>
   );
