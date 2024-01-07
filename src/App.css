@@ -1,5 +1,11 @@
-.content-container .bg-purple {
-    background-color: plum;
+.content-container .purple {
+    background-color: mediumpurple;
+}
+.content-container .off-white {
+    background-color:  cornsilk;
+}
+.content-container .green {
+    background-color: darkseagreen;
 }
 .nav-text {
     padding: 2.2vw;
