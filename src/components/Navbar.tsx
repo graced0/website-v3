@@ -1,12 +1,8 @@
-import { useState } from "react";
-
 interface Props {
   sections: string[];
 }
 
 function Navbar({ sections }: Props) {
-  const [currSection, setCurrSection] = useState(-1);
-
   return (
     <div
       style={{
@@ -21,17 +17,12 @@ function Navbar({ sections }: Props) {
       <h1 className="display-2 fw-bold pb-5">grace do</h1>
       <nav className="navbar-text navbar-default">
         <div className="nav flex-column fs-4 p-0">
-          {sections.map((sections, index) => (
+          {sections.map((sections) => (
             <a
+              className="pb-3"
               href={"#" + sections}
-              className={
-                currSection === index
-                  ? "nav-item link-offset-3 pt-3 link-dark"
-                  : "nav-item link-offset-3-hover link-underline-dark link-underline-opacity-0 link-underline-opacity-25-hover pt-3 link-dark"
-              }
               key={sections}
-              style={{ letterSpacing: "0.15em" }}
-              onClick={() => setCurrSection(index)}
+              style={{ letterSpacing: "0.10em" }}
             >
               {sections}
             </a>
@@ -88,7 +79,9 @@ function Navbar({ sections }: Props) {
           </svg>
         </a>
       </div>
-      <footer className="fs-4">© 2019 - 2024</footer>
+      <footer className="fs-4" style={{ letterSpacing: "0.10em" }}>
+        © 2019 - 2024
+      </footer>
     </div>
   );
 }
