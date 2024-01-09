@@ -8,7 +8,7 @@ function App() {
     <>
       <div>
         <body className="d-flex"> 
-          <div className="bg-white">
+          <div>
             <Navbar sections={navNames} />
           </div>
           <div className="flex-grow-1 content-container"> 
