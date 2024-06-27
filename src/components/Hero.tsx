@@ -56,7 +56,7 @@ function Hero() {
                     </a>
                 </li>
             </ul>
-            <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" style={{color: '#50486B'}}>
+            <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#50486B'}}>
                 <h4>RÉSUMÉ</h4>
             </a>
         </div>
