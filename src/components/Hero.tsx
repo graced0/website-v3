@@ -7,13 +7,13 @@ function Hero() {
             alignItems: 'center',
             height: '100vh',
             textAlign: 'center',
-            paddingBottom: '200px',
-            position: 'relative' // Ensure the container is relative for absolute positioning
+            paddingBottom: '15vh',
+            position: 'relative'
         }}>
             <h1 className="HeroTitle" style={{
                 fontFamily: 'Lexend',
                 fontWeight: 600,
-                fontSize: '128px',
+                fontSize: '6rem',
                 color: '#453763',
                 marginBottom: '15px'
             }}>Grace Do</h1>
@@ -21,7 +21,7 @@ function Hero() {
                 fontFamily: 'Space Grotesk',
                 color: '#50486B',
                 fontWeight: 300,
-                fontSize: '24px',
+                fontSize: '1.25rem',
                 lineHeight: '1.5'
             }}>I’m a student at the University of Virginia, interested in:<br /><b><i>Software Development</i></b> and <b><i>Media/Art</i></b></h4>
             <hr style={{
@@ -58,12 +58,12 @@ function Hero() {
                 </li>
             </ul>
             <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#50486B'}}>
-                <h4>RÉSUMÉ</h4>
+                <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.5rem'}}>RESUME</h4>
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#50486B" className="bi bi-arrow-down" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '30px' }}>
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
             </svg>
-            <p style={{ position: 'absolute', bottom: '60px', color:'#50486B'}}>Coming Soon...</p>
+            <p style={{ position: 'absolute', bottom: '60px', color:'#50486B', fontFamily: 'Lexend', fontSize: '1rem'}}>Coming Soon</p>
         </div>
     );
 }
