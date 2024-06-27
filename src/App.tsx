@@ -4,7 +4,10 @@ function App() {
   return (
     <>
       <div>
-          <body className="container-fluid">
+          <body style={{
+            margin: '1rem',
+            backgroundColor: '#B1DDAD'
+          }}>
             <Hero />
           </body>
       </div>
