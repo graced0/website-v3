@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { useEffect } from 'react';
 function Hero() {
     useEffect(() => {
