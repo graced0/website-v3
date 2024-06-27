@@ -1,4 +1,6 @@
 import Hero from "./components/Hero";
+import Art from "./components/Art";
+import Software from "./components/Software";
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
         backgroundColor: '#B1DDAD',
       }}>
         <Hero />
+        <Art />
+        <Software />
       </div>
     </div>
   );
