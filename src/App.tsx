@@ -1,20 +1,15 @@
-import Navbar from "./components/Navbar";
-import Content from "./components/Content";
+import Hero from "./components/Hero";
 
 function App() {
-  let navNames = ["about", "visual media", "projects"];
-
   return (
     <>
       <div>
-        <body className="d-flex"> 
-          <div>
-            <Navbar sections={navNames} />
-          </div>
-          <div className="flex-grow-1 content-container"> 
-            <Content />
-          </div>
-        </body>
+          <body style={{
+            margin: '1rem',
+            backgroundColor: '#B1DDAD'
+          }}>
+            <Hero />
+          </body>
       </div>
     </>
   );
