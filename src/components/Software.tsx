@@ -1,6 +1,6 @@
 function Software() {
     return (
-        <div className="SoftwareContainer" style={{
+        <div className="SoftwareContainer" id="software" style={{
             height: '100vh'
         }}>
         

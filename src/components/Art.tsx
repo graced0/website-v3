@@ -1,6 +1,6 @@
 function Art() {
     return (
-        <div className="ArtContainer" style={{
+        <div className="ArtContainer" id="art"style={{
             height: '100vh'
         }}>
             

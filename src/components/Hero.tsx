@@ -18,20 +18,42 @@ function Hero() {
             paddingBottom: '15vh',
             position: 'relative'
         }}>
-            <h1 className="HeroTitle" style={{
+            <h1 className="HeroTitle d-none d-sm-block" style={{
                 fontFamily: 'Lexend',
                 fontWeight: 600,
                 fontSize: '6rem',
                 color: '#453763',
                 marginBottom: '15px'
             }}>Grace Do</h1>
-            <h4 className="HeroBlurb" style={{
+            <h1 className="HeroTitle d-block d-sm-none" style={{
+                fontFamily: 'Lexend',
+                fontWeight: 600,
+                fontSize: '4rem',
+                color: '#453763',
+                marginBottom: '15px'
+            }}>Grace Do</h1>
+            <h4 className="HeroBlurb d-none d-sm-block" style={{
                 fontFamily: 'Space Grotesk',
                 color: '#50486B',
                 fontWeight: 300,
                 fontSize: '1.25rem',
                 lineHeight: '1.5'
-            }}>I’m a student at the University of Virginia, interested in:<br /><b><i>Software Development</i></b> and <b><i>Media/Art</i></b></h4>
+            }}>I’m a student at the University of Virginia, interested in:<br />
+                <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
+                &nbsp;and&nbsp;
+                <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
+            </h4>
+            <h4 className="HeroBlurb d-block d-sm-none" style={{
+                fontFamily: 'Space Grotesk',
+                color: '#50486B',
+                fontWeight: 300,
+                fontSize: '1rem',
+                lineHeight: '1.5'
+            }}>I’m a student at the University of Virginia, interested in:<br />
+                <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
+                &nbsp;and&nbsp;
+                <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
+            </h4>
             <hr style={{
                 margin: '20px',
                 color: '#50486B',
@@ -70,10 +92,10 @@ function Hero() {
                     <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.5rem'}}>RESUME</h4>
                 </a>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#50486B" className="bi bi-arrow-down" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '30px' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#50486B" className="bi bi-arrow-down d-none d-lg-block" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '30px' }}>
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
             </svg>
-            <p className="Scroll" style={{ position: 'absolute', bottom: '60px', color:'#50486B', fontFamily: 'Lexend', fontSize: '1rem', fontWeight: '300'}}>SCROLL</p>
+            <p className="Scroll d-none d-xl-block" style={{ position: 'absolute', bottom: '60px', color:'#50486B', fontFamily: 'Lexend', fontSize: '1rem', fontWeight: '300'}}>SCROLL</p>
         </div>
     );
 }
