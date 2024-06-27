@@ -11,7 +11,7 @@
     "@types/jquery": "^3.5.30",
     "@uidotdev/usehooks": "^2.4.1",
     "bootstrap": "^5.3.3",
-    "jquery": "^3.7.1",
+    "jquery": "npm:jQuery@^1.7.4",
     "jQuery": "^1.7.4",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
