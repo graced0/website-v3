@@ -5,6 +5,24 @@ function Hero() {
             $('.HeroBlurb').hide().fadeIn(1500);
             $('.SocialLinks').hide().fadeIn(1500);
             $('.HeroTitle').hide().slideDown(2000);
+            setTimeout(() => {
+                $('.Arrow').animate({
+                    bottom: '9vh',
+                    easing: 'swing'
+                });
+                $('.Arrow').animate({
+                    bottom: '10vh',
+                    easing: 'swing'
+                });
+                $('.Arrow').animate({
+                    bottom: '9vh',
+                    easing: 'swing'
+                });
+                $('.Arrow').animate({
+                    bottom: '10vh',
+                    easing: 'swing'
+                });
+            }, 3000);
           }, 50);
         }, []);
     return (
@@ -90,7 +108,7 @@ function Hero() {
                     </li>
                 </ul>
                 <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#50486B'}}>
-                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.5rem'}}>RESUME</h4>
+                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.3rem'}}>RESUME</h4>
                 </a>
             </div>
             <div className="SocialLinks d-block d-sm-none">
@@ -122,13 +140,12 @@ function Hero() {
                     </li>
                 </ul>
                 <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#50486B'}}>
-                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.25rem'}}>RESUME</h4>
+                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.15rem'}}>RESUME</h4>
                 </a>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#50486B" className="bi bi-arrow-down d-none d-lg-block" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '30px' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#50486B" className="Arrow bi bi-arrow-down d-none d-lg-block" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '10vh' }}>
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
             </svg>
-            <p className="Scroll d-none d-xl-block" style={{ position: 'absolute', bottom: '60px', color:'#50486B', fontFamily: 'Lexend', fontSize: '1rem', fontWeight: '300'}}>SCROLL</p>
         </div>
     );
 }

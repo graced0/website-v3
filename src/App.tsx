@@ -4,7 +4,7 @@ import Software from "./components/Software";
 
 function App() {
   return (
-    <div className="app-container" style={{padding: '1rem'}}>
+    <div className="app-container" style={{padding: '1.5vw'}}>
       <div className="rounded-5" style={{
         backgroundColor: '#B1DDAD',
       }}>
