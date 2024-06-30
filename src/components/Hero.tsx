@@ -66,7 +66,8 @@ function Hero() {
                 color: '#50486B',
                 fontWeight: 300,
                 fontSize: '1.1rem',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                padding: '5vw'
             }}>I’m a student at the University of Virginia, interested in:<br />
                 <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
                 &nbsp;and&nbsp;
