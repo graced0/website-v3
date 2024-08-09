@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="app-container">
       <Hero />
-      <Software />
-      <Art />
+      {/*<Software />*/}
+      {/*<Art />*/}
     </div>
   );
 }
