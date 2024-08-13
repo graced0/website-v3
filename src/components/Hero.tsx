@@ -120,7 +120,7 @@ function Hero() {
                         </a>
                     </li>
                 </ul>
-                <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
+                <a href="https://docs.google.com/document/d/1ioznZVGRAw4K-mJatiWn7I0nuQIqvoG3Y13kFbB7b6s/" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
                     <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.3rem'}}>RESUME</h4>
                 </a>
             </div>
@@ -153,7 +153,7 @@ function Hero() {
                         </a>
                     </li>
                 </ul>
-                <a href="https://drive.google.com/file/d/17g5xl65FdJjj12w7ItHPulBDVk0w1ZNy" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
+                <a href="https://docs.google.com/document/d/1ioznZVGRAw4K-mJatiWn7I0nuQIqvoG3Y13kFbB7b6s/" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
                     <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.15rem'}}>RESUME</h4>
                 </a>
             </div>
