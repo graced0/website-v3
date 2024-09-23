@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "@types/jquery": "^3.5.30",
+    "@types/react-bootstrap": "^0.32.37",
     "@uidotdev/usehooks": "^2.4.1",
     "bootstrap": "^5.3.3",
     "bxslider": "^4.2.17",
+    "install": "^0.13.0",
     "jquery": "npm:jQuery@^1.7.4",
     "jQuery": "^1.7.4",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
@@ -24,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "css-loader": "^7.1.2",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",

@@ -35,10 +35,6 @@ function Hero() {
             textAlign: 'center',
             paddingBottom: '15vh',
             position: 'relative',
-            background: 'linear-gradient(to bottom, #B1DDAD, white)',
-            boxSizing: 'border-box',
-            border: '1.5vw solid white',
-            borderRadius: '4vw'
         }}>
             <h1 className="HeroTitle d-none d-sm-block" style={{
                 fontFamily: 'Lexend',
@@ -160,7 +156,6 @@ function Hero() {
             <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#65578A" className="Arrow bi bi-arrow-down d-none d-lg-block" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '10vh' }}>
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
             </svg>
-            <p style={{ position: 'absolute', bottom: '40px', color:'#50486B'}}>Coming Soon</p>
         </div>
     );
 }

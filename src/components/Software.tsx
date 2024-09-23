@@ -1,33 +1,33 @@
-import { useEffect } from 'react';
 function Software() {
-     /*
-    TODO:
-    Design simple repeatable layout for software projects on display, photo + description?
-    */
-    useEffect(() => {
-        $(function(){
-            $('.bxslider').bxSlider({
-              mode: 'fade',
-              captions: true,
-              slideWidth: 600
-            });
-        });
-    }, [])
     return (
         <div className="SoftwareContainer" id="software" style={{
-            //height: '100vh'
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            textAlign: 'center',
+            paddingBottom: '15vh',
+            position: 'relative',
         }}>
-            
-            <ul className="slider">
-                <li><img src="http://placehold.it/170x200&text=Slide 1" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 2" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 3" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 4" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 5" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 6" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 7" /></li>
-                <li><img src="http://placehold.it/170x200&text=Slide 8" /></li>
-            </ul>
+            <h4 className="Footer d-none d-sm-block" style={{ 
+            position: 'absolute', 
+            bottom: '5vh', 
+            fontSize: '1.25rem',
+            fontFamily: 'Space Grotesk',
+            color: '#65578A',
+            fontWeight: 300, 
+        }}><span style={{fontWeight: '500'}}>Built by Grace Do</span>
+        </h4>
+        <h4 className="Footer d-block d-sm-none" style={{ 
+            position: 'absolute', 
+            bottom: '5vh', 
+            fontSize: '1.1rem',
+            fontFamily: 'Space Grotesk',
+            color: '#65578A',
+            fontWeight: 300, 
+        }}><span style={{fontWeight: '500'}}>Built by Grace Do</span>
+        </h4>
         </div>
     )
 
