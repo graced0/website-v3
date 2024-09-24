@@ -17,7 +17,7 @@ function Software() {
             fontFamily: 'Space Grotesk',
             color: '#65578A',
             fontWeight: 300, 
-        }}><span style={{fontWeight: '500'}}>Built by Grace Do</span>
+        }}><span style={{fontWeight: '400'}}>Built by Grace Do.</span>
         </h4>
         <h4 className="Footer d-block d-sm-none" style={{ 
             position: 'absolute', 
@@ -26,7 +26,7 @@ function Software() {
             fontFamily: 'Space Grotesk',
             color: '#65578A',
             fontWeight: 300, 
-        }}><span style={{fontWeight: '500'}}>Built by Grace Do</span>
+        }}><span style={{fontWeight: '400'}}>Built by Grace Do.</span>
         </h4>
         </div>
     )

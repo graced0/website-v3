@@ -58,7 +58,7 @@ function Hero() {
                 lineHeight: '1.5',
             }}>I’m a student at the University of Virginia, interested in:<br />
                 <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
-                &nbsp;and&nbsp;
+                &nbsp;+&nbsp;
                 <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
             </h4>
             <h4 className="HeroBlurb d-block d-sm-none" style={{
@@ -71,7 +71,7 @@ function Hero() {
                 paddingRight: '5vw'
             }}>I’m a student at the University of Virginia, interested in:<br />
                 <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
-                &nbsp;and&nbsp;
+                &nbsp;+&nbsp;
                 <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
             </h4>
             <hr className="d-none d-sm-block"style={{
@@ -116,9 +116,6 @@ function Hero() {
                         </a>
                     </li>
                 </ul>
-                <a href="https://docs.google.com/document/d/1ioznZVGRAw4K-mJatiWn7I0nuQIqvoG3Y13kFbB7b6s/" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
-                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.3rem'}}>RESUME</h4>
-                </a>
             </div>
             <div className="SocialLinks d-block d-sm-none">
                 <ul style={{
@@ -149,9 +146,6 @@ function Hero() {
                         </a>
                     </li>
                 </ul>
-                <a href="https://docs.google.com/document/d/1ioznZVGRAw4K-mJatiWn7I0nuQIqvoG3Y13kFbB7b6s/" target="_blank" rel="noopener noreferrer" style={{color: '#65578A'}}>
-                    <h4 style={{fontFamily: 'Space Grotesk', fontSize: '1.15rem'}}>RESUME</h4>
-                </a>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#65578A" className="Arrow bi bi-arrow-down d-none d-lg-block" viewBox="0 0 16 16" style={{ position: 'absolute', bottom: '10vh' }}>
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
