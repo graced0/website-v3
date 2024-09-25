@@ -1,6 +1,9 @@
-body {
-  cursor: url('/src/assets/cursor.svg'), auto;
+/*body, html, div {
+  cursor: url('/src/assets/cursor.png'), auto;
 }
+a {
+  cursor: url('/src/assets/pointer.png'), auto
+}*/
 
 ::-webkit-scrollbar {
     width: 15px;
