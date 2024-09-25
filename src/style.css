@@ -4,6 +4,13 @@
 a {
   cursor: url('/src/assets/pointer.png'), auto
 }*/
+body, html {
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
+}
 
 ::-webkit-scrollbar {
     width: 15px;
