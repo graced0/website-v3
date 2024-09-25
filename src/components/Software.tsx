@@ -17,7 +17,7 @@ function Software() {
             fontFamily: 'Space Grotesk',
             color: '#65578A',
             fontWeight: 300, 
-        }}><span style={{fontWeight: '400', fontSize:'1rem'}}>Built by Grace Do.</span>
+        }}><a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'1.15rem'}}>Developed with 😻 by Grace Do.</a>
         </h4>
         <h4 className="Footer d-block d-sm-none" style={{ 
             position: 'absolute', 
@@ -26,7 +26,7 @@ function Software() {
             fontFamily: 'Space Grotesk',
             color: '#65578A',
             fontWeight: 300, 
-        }}><span style={{fontWeight: '400'}}>Built by Grace Do.</span>
+        }}><a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'1rem'}}>Developed with 😻 by Grace Do.</a>
         </h4>
         </div>
     )
