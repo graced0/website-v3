@@ -15,7 +15,6 @@ function Art() {
             paddingBottom: '15vh',
             position: 'relative',
         }}>
-        
         </div>
     )
 

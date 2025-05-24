@@ -1,67 +1,60 @@
-/*body, html, div {
-  cursor: url('/src/assets/cursor.png'), auto;
-}
-a {
-  cursor: url('/src/assets/pointer.png'), auto
-}*/
-body, html {
-  cursor: default;
-}
-
-a {
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-    width: 15px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #4E3C73; /* Change this to any color you prefer */
-    border-radius: 10px;       /* Makes it rounder */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #65578A;
-  }
-
-  .nav-link {
-    color: #65578A;
-    position: relative;
-    text-decoration: none !important;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
-    display: inline-block;
-    white-space: nowrap;
+.nav-link {
+  color: #111; /* black for light mode */
+  position: relative;
+  text-decoration: none !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -3px;
-    left: 0;
-    background-color: #9881ac;
-    transition: width 0.3s ease-in-out;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: #111; /* underline black in light mode */
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #9881ac;
-    transform: translateY(-2px); /* Slight upward motion on hover */
+  color: #555; /* dark gray on hover */
+  transform: translateY(-2px);
 }
 
 .nav-link:hover::after {
-    width: 100%; /* Underline expands */
+  width: 100%;
+}
+
+/* NIGHT MODE: white on black */
+.night-mode .nav-link {
+  color: #fff;
+}
+
+.night-mode .nav-link:hover {
+  color: #ccc; /* light gray on hover */
+}
+
+.night-mode .nav-link::after {
+  background-color: #fff;
+}
+
+.night-mode .SocialLinks a svg {
+  fill: #A8FFB0;
+}
+
+.night-mode .SocialLinks a:hover svg {
+  fill: #C2FFD3;
 }
 
 .SocialLinks a svg {
-    position: relative;
-    fill: #65578A; /* Default fill color for the SVG */
-    transition: fill 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+  position: relative;
+  fill: #14532d; /* dark green for light mode */
+  transition: fill 0.3s ease, transform 0.3s ease;
 }
 
 .SocialLinks a:hover svg {
-    fill: #9881ac; /* Fill color when the link is hovered */
-    transform: translateY(-3px); /* Slight upward motion on hover */
+  fill: #228B22; /* lighter green on hover */
+  transform: translateY(-3px);
 }
-

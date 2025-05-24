@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.3.0",
     "@types/jquery": "^3.5.30",
     "@types/react-bootstrap": "^0.32.37",
     "@uidotdev/usehooks": "^2.4.1",

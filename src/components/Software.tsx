@@ -2,12 +2,12 @@ import chefwormGif from '../../public/chefworm.gif';
 import websitePhoto from '../../public/websiteportfolio.jpeg';
 
 
-function Software() {
+function Software({ nightMode }: { nightMode: boolean }) {
     return (
         <div className="SoftwareContainer" id="software" style={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'flex-start', // changed from 'center'
+            justifyContent: 'flex-start',
             alignItems: 'center',
             height: '100vh',
             textAlign: 'center',
@@ -26,12 +26,12 @@ function Software() {
                     <img 
                         src={chefwormGif}
                         alt="GIF of Chef Worm project" 
-                        style={{ width: '300px', borderRadius: '1rem', boxShadow: '0 2px 12px #ccc' }} 
+                        style={{ width: '300px', borderRadius: '1rem'}} 
                     />
                 </div>
                 <div style={{ /* flex: 1 removed */ textAlign: 'left', marginLeft: '1rem' }}>
-                    <h2 style={{ fontFamily: 'Lexend', color: '#4E3C73' }}>Chef Worm</h2>
-                    <p style={{ fontFamily: 'Space Grotesk', color: '#65578A', fontSize: '1.15rem' }}>
+                    <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Chef Worm</h2>
+                    <p style={{ fontFamily: 'Space Grotesk', color: 'inherit', fontSize: '1.15rem' }}>
                         Developed in Lua for PICO-8. <br /><br />
                         <a href="https://gracedo.itch.io/chef-worm" target="_blank" rel="noopener noreferrer" className="nav-link">https://gracedo.itch.io/chef-worm</a>
                     </p>
@@ -47,8 +47,8 @@ function Software() {
                 margin: '1rem auto',
             }}>
                 <div style={{ /* flex: 1 removed */ textAlign: 'right', marginRight: '1rem' }}>
-                    <h2 style={{ fontFamily: 'Lexend', color: '#4E3C73' }}>Website Portfolio</h2>
-                    <p style={{ fontFamily: 'Space Grotesk', color: '#65578A', fontSize: '1.15rem' }}>
+                    <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Website Portfolio</h2>
+                    <p style={{ fontFamily: 'Space Grotesk', color: 'inherit', fontSize: '1.15rem' }}>
                         Developed in TypeScript and HTML/CSS,<br />
                         using React, Vite, Bootstrap, and jQuery.<br /><br />
                         <a href="https://gracedo.vercel.app" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ whiteSpace: 'nowrap' }}>https://gracedo.vercel.app</a>
@@ -58,11 +58,10 @@ function Software() {
                     <img 
                         src={websitePhoto}
                         alt="Photo of Me" 
-                        style={{ width: '300px', borderRadius: '1rem', boxShadow: '0 2px 12px #ccc' }} 
+                        style={{ width: '300px', borderRadius: '1rem'}} 
                     />
                 </div>
             </div>
-            {/* ...existing footer code... */}
             <h4 className="Footer d-none d-sm-block" style={{ 
                 position: 'absolute', 
                 bottom: '5vh', 
@@ -71,9 +70,9 @@ function Software() {
                 color: '#65578A',
                 fontWeight: 300, 
             }}>
-                <a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'1rem'}}>Developed with 😻 by Grace Do.</a>
+                <a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'1rem'}}>Developed by Grace Do 😻.</a>
             </h4>
-            <h4 className="Footer d-block d-sm-none" style={{ 
+            {/* <h4 className="Footer d-block d-sm-none" style={{ 
                 position: 'absolute', 
                 bottom: '5vh', 
                 fontSize: '1.1rem',
@@ -81,8 +80,8 @@ function Software() {
                 color: '#65578A',
                 fontWeight: 300, 
             }}>
-                <a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'0.75rem'}}>Developed with 😻 by Grace Do.</a>
-            </h4>
+                <a className="nav-link" href="https://github.com/graced0/website-v3" style={{fontWeight: '400', fontSize:'0.75rem'}}>Developed by Grace Do 😻.</a>
+            </h4> */}
         </div>
     );
 }
