@@ -28,8 +28,10 @@ a {
   .nav-link {
     color: #65578A;
     position: relative;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .nav-link::after {

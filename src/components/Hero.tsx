@@ -33,7 +33,7 @@ function Hero() {
             alignItems: 'center',
             height: '100vh',
             textAlign: 'center',
-            paddingBottom: '15vh',
+            paddingBottom: '13vh',
             position: 'relative',
         }}>
             <h1 className="HeroTitle d-none d-sm-block" style={{
@@ -56,7 +56,7 @@ function Hero() {
                 fontWeight: 300,
                 fontSize: '1.25rem',
                 lineHeight: '1.5',
-            }}>I’m a student at the University of Virginia, interested in:<br />
+            }}>I’m a software engineer at Walmart, interested in:<br />
                 <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
                 &nbsp;+&nbsp;
                 <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
@@ -69,7 +69,7 @@ function Hero() {
                 lineHeight: '1.5',
                 paddingLeft: '5vw',
                 paddingRight: '5vw'
-            }}>I’m a student at the University of Virginia, interested in:<br />
+            }}>I’m a software engineer at Walmart, interested in:<br />
                 <a className="nav-link" href="#art" style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
                 &nbsp;+&nbsp;
                 <a className="nav-link" href="#software" style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
