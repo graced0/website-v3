@@ -65,6 +65,7 @@ function Hero({ fullpageRef, nightMode }: { fullpageRef: any, nightMode: boolean
                 fontWeight: 300,
                 fontSize: '1.25rem',
                 lineHeight: '1.5',
+                transition: "color 0.3s"
             }}>I’m a software engineer at Walmart, interested in:<br />
                 <a className="nav-link" href="#art" onClick={goToSection(1)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
                 &nbsp;+&nbsp;
