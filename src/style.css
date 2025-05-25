@@ -5,12 +5,17 @@
 }
 
 html, body {
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: default;
+}
+
+a, .nav-link {
+  cursor: pointer;
 }
 
 .nav-link {
-  color: #111; /* black for light mode */
+  color: #111;
   position: relative;
   text-decoration: none !important;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -25,12 +30,12 @@ html, body {
   height: 1px;
   bottom: -3px;
   left: 0;
-  background-color: #111; /* underline black in light mode */
+  background-color: #111;
   transition: width 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #555; /* dark gray on hover */
+  color: #555;
   transform: translateY(-2px);
 }
 
@@ -44,7 +49,7 @@ html, body {
 }
 
 .night-mode .nav-link:hover {
-  color: #ccc; /* light gray on hover */
+  color: #ccc;
 }
 
 .night-mode .nav-link::after {

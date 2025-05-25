@@ -11,7 +11,7 @@ function Software({ nightMode }: { nightMode: boolean }) {
             alignItems: 'center',
             height: '100vh',
             textAlign: 'center',
-            paddingTop: '3.5rem',
+            paddingTop: '4rem',
             position: 'relative',
         }}>
             <div style={{

@@ -7,7 +7,7 @@ import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from 
 function App() {
   const fullpageRef = useRef<any>(null);
   const isTransitioning = useRef(false);
-  const [nightMode, setNightMode] = useState(true); // default is dark mode
+  const [nightMode, setNightMode] = useState(true);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -41,7 +41,7 @@ function App() {
     }, 600);
   };
 
-const backgroundColor = nightMode ? "#111" : "#e6e6e6"; //#e6e6e6 is a nice light gray
+const backgroundColor = nightMode ? "#111" : "#e6e6e6";
 const color = nightMode ? "#A8FFB0" : "#52d45f";
 
   return (
@@ -54,7 +54,6 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
         color,
       }}
     >
-      {/* Night mode toggle button */}
       <label
         style={{
           position: "fixed",

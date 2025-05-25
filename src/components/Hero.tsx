@@ -48,7 +48,7 @@ function Hero({ fullpageRef, nightMode }: { fullpageRef: any, nightMode: boolean
                     fontFamily: 'Lexend',
                     fontWeight: 600,
                     fontSize: '6rem',
-                    color: nightMode ? "#fff" : "#111", // White in night mode, black in light mode
+                    color: nightMode ? "#fff" : "#111",
                     marginBottom: '1rem',
                     transition: "color 0.3s"
                 }}>Grace Do</h1>
