@@ -12,9 +12,16 @@ function Art() {
             alignItems: 'center',
             height: '100vh',
             textAlign: 'center',
-            paddingBottom: '15vh',
             position: 'relative',
         }}>
+            <h2 style={{
+                fontFamily: 'Lexend, Space Grotesk, Arial, sans-serif',
+                fontWeight: 600,
+                fontSize: '2.5rem',
+                color: '#888'
+            }}>
+                ART HERE SOON... STAY TUNED!
+            </h2>
         </div>
     )
 

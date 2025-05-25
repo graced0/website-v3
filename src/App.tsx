@@ -72,6 +72,7 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
           padding: "0.25rem 0.75rem",
           fontSize: "0.95rem",
           fontWeight: 600,
+          fontFamily: "'Lexend', 'Space Grotesk', Arial, sans-serif",
           textDecoration: "none",
           boxShadow: "0 2px 8px #0002",
           transition: "background 0.3s, color 0.3s",
