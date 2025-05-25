@@ -42,7 +42,7 @@ function App() {
   };
 
 const backgroundColor = nightMode ? "#111" : "#e6e6e6"; //#e6e6e6 is a nice light gray
-const color = nightMode ? "#A8FFB0" : "#14532d";
+const color = nightMode ? "#A8FFB0" : "#52d45f";
 
   return (
     <div
@@ -118,7 +118,7 @@ const color = nightMode ? "#A8FFB0" : "#14532d";
       >
         <FullpageNavigation
           itemStyle={{
-            backgroundColor: nightMode ? "#A8FFB0" : "#14532d"
+            backgroundColor: nightMode ? "#A8FFB0" : "#52d45f"
           }}
         />
         <FullPageSections>

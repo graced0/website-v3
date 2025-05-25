@@ -61,11 +61,11 @@ html, body {
 
 .SocialLinks a svg {
   position: relative;
-  fill: #14532d; /* dark green for light mode */
+  fill: #52d45f;
   transition: fill 0.3s ease, transform 0.3s ease;
 }
 
 .SocialLinks a:hover svg {
-  fill: #228B22; /* lighter green on hover */
+  fill: #87ff93; 
   transform: translateY(-3px);
 }
