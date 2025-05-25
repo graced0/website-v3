@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import resume from '../public/Do_Grace_resume.pdf';
+
 import Hero from "./components/Hero";
 import Art from "./components/Art";
 import Software from "./components/Software";
@@ -54,6 +56,45 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
         color,
       }}
     >
+      <a
+        href={resume}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "fixed",
+          top: 20,
+          left: 20,
+          zIndex: 2000,
+          background: nightMode ? "#fff" : "#111",
+          color: nightMode ? "#111" : "#fff",
+          border: "none",
+          borderRadius: "1.5rem",
+          padding: "0.25rem 0.75rem",
+          fontSize: "0.95rem",
+          fontWeight: 600,
+          textDecoration: "none",
+          boxShadow: "0 2px 8px #0002",
+          transition: "background 0.3s, color 0.3s",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.4em"
+        }}
+      >
+        Resume
+      </a>
+      <label
+        style={{
+          position: "fixed",
+          top: 20,
+          right: 20,
+          zIndex: 2000,
+          display: "flex",
+          alignItems: "center",
+          cursor: "pointer",
+          userSelect: "none"
+        }}
+      ></label>
       <label
         style={{
           position: "fixed",
