@@ -18,7 +18,6 @@ function Software({ nightMode }: { nightMode: boolean }) {
                 position: 'relative',
             }}
         >
-            {/* Center this wrapper */}
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -27,7 +26,7 @@ function Software({ nightMode }: { nightMode: boolean }) {
                 flex: 1,
                 width: '100%',
             }}>
-                <div style={{
+                <div className="project-row" style={{
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -35,22 +34,22 @@ function Software({ nightMode }: { nightMode: boolean }) {
                     width: '65%',
                     margin: '1rem auto',
                 }}>
-                    <div style={{ marginRight: '2rem' }}>
-                        <img
-                            src={chefwormGif}
-                            alt="GIF of Chef Worm project"
-                            style={{ width: '300px', borderRadius: '1rem' }}
-                        />
-                    </div>
-                    <div style={{ textAlign: 'left', marginLeft: '1rem' }}>
+                    <div className="project-text" style={{ textAlign: 'left', marginLeft: '1rem' }}>
                         <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Chef Worm</h2>
                         <p style={{ fontFamily: 'Space Grotesk', color: 'inherit', fontSize: '1.15rem' }}>
                             Developed in Lua for PICO-8. <br /><br />
                             <a href="https://gracedo.itch.io/chef-worm" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ whiteSpace: 'nowrap' }}>https://gracedo.itch.io/chef-worm</a>
                         </p>
                     </div>
+                    <div className="project-image" style={{ marginRight: '2rem' }}>
+                        <img
+                            src={chefwormGif}
+                            alt="GIF of Chef Worm project"
+                            style={{ width: '300px', borderRadius: '1rem' }}
+                        />
+                    </div>
                 </div>
-                <div style={{
+                <div className="project-row"style={{
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -58,7 +57,7 @@ function Software({ nightMode }: { nightMode: boolean }) {
                     width: '65%',
                     margin: '1rem auto',
                 }}>
-                    <div style={{ textAlign: 'right', marginRight: '1rem' }}>
+                    <div className="project-text" style={{ textAlign: 'right', marginRight: '1rem' }}>
                         <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Website Portfolio</h2>
                         <p style={{ fontFamily: 'Space Grotesk', color: 'inherit', fontSize: '1.15rem' }}>
                             Developed in TypeScript and HTML/CSS,<br />
@@ -66,7 +65,7 @@ function Software({ nightMode }: { nightMode: boolean }) {
                             <a href="https://gracedo.vercel.app" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ whiteSpace: 'nowrap' }}>https://gracedo.vercel.app</a>
                         </p>
                     </div>
-                    <div style={{ marginLeft: '2rem' }}>
+                    <div className="project-image" style={{ marginLeft: '2rem' }}>
                         <img
                             src={websitePhoto}
                             alt="Photo of Me"

@@ -74,3 +74,156 @@ a, .nav-link {
   fill: #87ff93; 
   transform: translateY(-3px);
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 900px) {
+  .SoftwareContainer > div,
+  .ArtContainer > div {
+    width: 95% !important;
+    max-width: 100vw !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .HeroContainer {
+    padding-bottom: 5vh !important;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+  .HeroTitle {
+    font-size: 4rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0 2rem !important;
+    display: block !important;
+  }
+  .HeroBlurb {
+    font-size: 0.5 !important;
+    padding: 0 2rem !important;
+    line-height: 1.4 !important;
+    display: block !important;
+  }
+  .Arrow {
+    width: 2rem !important;
+    height: 2rem !important;
+    bottom: 2vh !important;
+  }
+  .SocialLinks {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0.5rem 0 !important;
+  }
+  .SocialLinks ul {
+    flex-direction: row !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .SocialLinks li {
+    margin: 0 0.5rem !important;
+  }
+  .ArtContainer h2 {
+    font-size: 1.3rem !important;
+    padding: 0 4em;
+  }
+  .ArtContainer > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .ArtContainer img {
+    width: 90vw !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0.5rem 0 !important;
+  }
+  .nav-link {
+    font-size: 1.2rem !important;
+  }
+  .Footer {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 0 !important;
+    position: static !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .SoftwareContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+  }
+  .SoftwareContainer > div {
+    flex: 1 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+  }
+  .SoftwareContainer .project-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 1.5rem 0 !important;
+    gap: 1rem !important;
+  }
+  .SoftwareContainer .project-row > div {
+    margin: 0 !important;
+    text-align: center !important;
+    order: unset !important; /* Ensure natural order: text then image */
+  }
+  .SoftwareContainer img {
+    width: 40vw !important;
+    max-width: 150vw !important;
+    height: auto !important;
+    margin: 0 0 !important;
+    border-radius: 0rem !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .SoftwareContainer .project-text {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .SoftwareContainer .project-text h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .SoftwareContainer .project-text p {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+}
+
+/* Desktop: alternate sides for project rows */
+@media (min-width: 951px) {
+  .SoftwareContainer .project-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 65%;
+    margin: 1rem auto;
+  }
+  .SoftwareContainer .project-row:nth-child(1) .project-text {
+    order: 2;
+    text-align: right;
+  }
+  .SoftwareContainer .project-row:nth-child(1) .project-image {
+    order: 1;
+  }
+  .SoftwareContainer .project-row:nth-child(2) .project-text {
+    order: 1;
+    text-align: left;
+  }
+  .SoftwareContainer .project-row:nth-child(2) .project-image {
+    order: 2;
+  }
+}

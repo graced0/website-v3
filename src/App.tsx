@@ -157,7 +157,7 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
         duration={600}
         onChange={handleChange}
       >
-        <FullpageNavigation
+        <FullpageNavigation className="NavigationDots" 
           itemStyle={{
             backgroundColor: nightMode ? "#A8FFB0" : "#52d45f"
           }}
