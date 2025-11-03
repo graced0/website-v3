@@ -64,7 +64,8 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
       className={`app-container${nightMode ? " night-mode" : ""}`}
       style={{
         backgroundColor,
-        minHeight: "100vh",
+        minHeight: "100dvh", // Use 100dvh to account for mobile browser UI
+        overflow: "hidden", // Prevent scrolling issues
         transition: "background 0.3s, color 0.3s",
         color,
       }}
