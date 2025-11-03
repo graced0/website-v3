@@ -1,11 +1,18 @@
 import { useEffect } from 'react';
-function Hero({ fullpageRef, nightMode }: { fullpageRef: any, nightMode: boolean }) {
+
+interface HeroProps {
+    fullpageRef: any;
+    nightMode: boolean;
+}
+
+function Hero({ fullpageRef, nightMode }: HeroProps) {
     const goToSection = (index: number) => (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    if (fullpageRef?.current?.goto && fullpageRef.current.slides[index]) {
-      fullpageRef.current.goto(fullpageRef.current.slides[index]);
-    }
-  };
+        e.preventDefault();
+        if (fullpageRef?.current?.goto && fullpageRef.current.slides[index]) {
+            fullpageRef.current.goto(fullpageRef.current.slides[index]);
+        }
+    };
+
     useEffect(() => {
         setTimeout(() => {
             $('.HeroBlurb').hide().fadeIn(1500);
@@ -31,6 +38,7 @@ function Hero({ fullpageRef, nightMode }: { fullpageRef: any, nightMode: boolean
             }, 2500);
         }, 50);
     }, []);
+
     return (
         <div className="HeroContainer" style={{
             display: 'flex',
@@ -59,7 +67,7 @@ function Hero({ fullpageRef, nightMode }: { fullpageRef: any, nightMode: boolean
                 fontSize: '1.25rem',
                 lineHeight: '1.5',
                 transition: "color 0.3s"
-            }}>I’m a software engineer at Walmart, interested in:<br />
+            }}>I’m a software engineer at Visa, interested in:<br />
                 <a className="nav-link" href="#art" onClick={goToSection(1)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
                 &nbsp;+&nbsp;
                 <a className="nav-link" href="#software" onClick={goToSection(2)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 

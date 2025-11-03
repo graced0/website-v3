@@ -9,6 +9,7 @@ import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from 
 function App() {
   const fullpageRef = useRef<any>(null);
   const isTransitioning = useRef(false);
+  const transitionTimeout = useRef<NodeJS.Timeout | null>(null); // Add a timeout reference
   const [nightMode, setNightMode] = useState(true);
 
   useEffect(() => {
@@ -19,22 +20,34 @@ function App() {
       }
       if (!fullpageRef.current) return;
       e.preventDefault();
+
       const current = fullpageRef.current.state.number || 0;
       const total = fullpageRef.current.slides.length;
       let next;
+
       if (e.deltaY > 0) {
         next = Math.min(current + 1, total - 1);
       } else {
         next = Math.max(current - 1, 0);
       }
+
       if (next !== current) {
         isTransitioning.current = true;
         fullpageRef.current.goto(fullpageRef.current.slides[next]);
+
+        // Set a timeout to prevent multiple transitions
+        if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
+        transitionTimeout.current = setTimeout(() => {
+          isTransitioning.current = false;
+        }, 600); // Match the duration of the transition
       }
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleWheel);
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
+    };
   }, []);
 
   const handleChange = () => {

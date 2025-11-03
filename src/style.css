@@ -43,7 +43,6 @@ a, .nav-link {
   width: 100%;
 }
 
-/* NIGHT MODE: white on black */
 .night-mode .nav-link {
   color: #fff;
 }
