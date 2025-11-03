@@ -58,10 +58,9 @@ function Software({ nightMode }: { nightMode: boolean }) {
                     margin: '1rem auto',
                 }}>
                     <div className="project-text" style={{ textAlign: 'right', marginRight: '1rem' }}>
-                        <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Website Portfolio</h2>
+                        <h2 style={{ fontFamily: 'Lexend', color: nightMode ? '#fff' : '#111' }}>Personal Portfolio</h2>
                         <p style={{ fontFamily: 'Space Grotesk', color: 'inherit', fontSize: '1.15rem' }}>
-                            Developed in TypeScript and HTML/CSS,<br />
-                            using React, Vite, Bootstrap, and jQuery.<br /><br />
+                            Developed in TypeScript and HTML/CSS.<br /><br />
                             <a href="https://gracedo.vercel.app" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ whiteSpace: 'nowrap' }}>https://gracedo.vercel.app</a>
                         </p>
                     </div>
@@ -74,7 +73,6 @@ function Software({ nightMode }: { nightMode: boolean }) {
                     </div>
                 </div>
             </div>
-            {/* Footer stays absolutely at the bottom */}
             <h4 className="Footer d-none d-sm-block" style={{
                 position: 'absolute',
                 bottom: '3vh',
