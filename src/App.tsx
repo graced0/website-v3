@@ -6,58 +6,104 @@ import Art from "./components/Art";
 import Software from "./components/Software";
 import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from '@ap.cx/react-fullpage';
 
+interface SpotifyTrackResponse {
+  isPlaying: boolean;
+  title: string;
+  artist: string;
+  songUrl: string;
+}
+
+async function updateSpotifyStatus(): Promise<void> {
+  const ticker = document.getElementById('spotify-ticker');
+  const link = document.getElementById('spotify-link') as HTMLAnchorElement | null;
+
+  if (!ticker || !link) return;
+
+  try {
+    const response = await fetch('/api/spotify');
+    const data: SpotifyTrackResponse = await response.json();
+
+    link.href = data.songUrl || 'https://open.spotify.com';
+
+    const label = data.isPlaying ? '🔊 Listening to' : '🎧 Last song I listened to';
+    const content = `${label} → <strong>${data.title}</strong> by <em>${data.artist}</em>`;
+    ticker.innerHTML = `<span class="spotify-text">${content}</span>`;
+  } catch (error) {
+    console.error('Error loading Spotify status:', error);
+    ticker.textContent = 'Spotify status unavailable';
+  }
+}
+
 function App() {
   const fullpageRef = useRef<any>(null);
   const isTransitioning = useRef(false);
-  const transitionTimeout = useRef<NodeJS.Timeout | null>(null); // Add a timeout reference
-  const [nightMode, setNightMode] = useState(true);
+  const transitionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [nightMode, setNightMode] = useState(() => {
+    if (typeof window === "undefined") return true;
+
+    const savedMode = window.localStorage.getItem("nightMode");
+    return savedMode === null ? true : savedMode === "true";
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("nightMode", String(nightMode));
+    }
+  }, [nightMode]);
+
+  useEffect(() => {
+    const frameId = window.requestAnimationFrame(() => {
+      void updateSpotifyStatus();
+    });
+
+    const intervalId = window.setInterval(() => {
+      void updateSpotifyStatus();
+    }, 5000);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.clearInterval(intervalId);
+    };
+  }, []);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
+      if (!fullpageRef.current?.slides?.length) return;
       if (isTransitioning.current) {
         e.preventDefault();
         return;
       }
-      if (!fullpageRef.current) return;
+
+      const delta = e.deltaY;
+      if (Math.abs(delta) < 20) return;
+
       e.preventDefault();
 
-      const current = fullpageRef.current.state.number || 0;
+      const current = fullpageRef.current.state.number ?? 0;
       const total = fullpageRef.current.slides.length;
-      let next;
+      const next = delta > 0 ? Math.min(current + 1, total - 1) : Math.max(current - 1, 0);
 
-      if (e.deltaY > 0) {
-        next = Math.min(current + 1, total - 1);
-      } else {
-        next = Math.max(current - 1, 0);
-      }
+      if (next === current) return;
 
-      if (next !== current) {
-        isTransitioning.current = true;
-        fullpageRef.current.goto(fullpageRef.current.slides[next]);
+      isTransitioning.current = true;
+      fullpageRef.current.goto(fullpageRef.current.slides[next]);
 
-        // Set a timeout to prevent multiple transitions
-        if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
-        transitionTimeout.current = setTimeout(() => {
-          isTransitioning.current = false;
-        }, 600); // Match the duration of the transition
-      }
+      if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
+      transitionTimeout.current = setTimeout(() => {
+        isTransitioning.current = false;
+      }, 700);
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
+
     return () => {
       window.removeEventListener("wheel", handleWheel);
       if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
     };
   }, []);
 
-  const handleChange = () => {
-    setTimeout(() => {
-      isTransitioning.current = false;
-    }, 600);
-  };
-
-const backgroundColor = nightMode ? "#111" : "#e6e6e6";
-const color = nightMode ? "#A8FFB0" : "#52d45f";
+  const backgroundColor = nightMode ? "#111" : "#e6e6e6";
+  const color = nightMode ? "#A8FFB0" : "#52d45f";
 
   return (
     <div
@@ -169,7 +215,6 @@ const color = nightMode ? "#A8FFB0" : "#52d45f";
         ref={fullpageRef}
         scrollSensitivity={1}
         duration={600}
-        onChange={handleChange}
       >
         <FullpageNavigation className="NavigationDots" 
           itemStyle={{

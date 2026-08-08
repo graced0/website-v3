@@ -14,29 +14,20 @@ function Hero({ fullpageRef, nightMode }: HeroProps) {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            $('.HeroBlurb').hide().fadeIn(1500);
-            $('.SocialLinks').hide().fadeIn(1500);
-            $('.HeroTitle').hide().slideDown(2000);
+        const startAnimations = () => {
+            $('.HeroBlurb').hide().fadeIn(1200);
+            $('.SocialLinks').hide().fadeIn(1200);
+            $('.HeroTitle').hide().slideDown(1400);
             setTimeout(() => {
-                $('.Arrow').animate({
-                    bottom: '4vh',
-                    easing: 'swing'
-                });
-                $('.Arrow').animate({
-                    bottom: '5vh',
-                    easing: 'swing'
-                });
-                $('.Arrow').animate({
-                    bottom: '4vh',
-                    easing: 'swing'
-                });
-                $('.Arrow').animate({
-                    bottom: '5vh',
-                    easing: 'swing'
-                });
-            }, 2500);
-        }, 50);
+                $('.Arrow').animate({ bottom: '4vh', easing: 'swing' });
+                $('.Arrow').animate({ bottom: '5vh', easing: 'swing' });
+                $('.Arrow').animate({ bottom: '4vh', easing: 'swing' });
+                $('.Arrow').animate({ bottom: '5vh', easing: 'swing' });
+            }, 1000);
+        };
+
+        const timeoutId = window.setTimeout(startAnimations, 0);
+        return () => window.clearTimeout(timeoutId);
     }, []);
 
     return (
@@ -45,7 +36,7 @@ function Hero({ fullpageRef, nightMode }: HeroProps) {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '100vh',
+            height: '100dvh',
             textAlign: 'center',
             paddingBottom: '13vh',
             position: 'relative',
@@ -67,10 +58,10 @@ function Hero({ fullpageRef, nightMode }: HeroProps) {
                 fontSize: '1.25rem',
                 lineHeight: '1.5',
                 transition: "color 0.3s"
-            }}>I’m a software engineer at Visa, interested in:<br />
-                <a className="nav-link" href="#art" onClick={goToSection(1)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Art</i></a>
+            }}>I’m interested in many things, including:<br />
+                <a className="nav-link" href="#art" onClick={goToSection(1)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Visual Media</i></a>
                 &nbsp;+&nbsp;
-                <a className="nav-link" href="#software" onClick={goToSection(2)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Software Development</i></a> 
+                <a className="nav-link" href="#software" onClick={goToSection(2)} style={{display: 'inline-flex', fontWeight: '500'}}><i>Software</i></a> 
             </h4>
             <hr style={{
                 margin: '1rem',
@@ -83,7 +74,7 @@ function Hero({ fullpageRef, nightMode }: HeroProps) {
                     display: 'flex',
                     listStyleType: 'none',
                     padding: '1rem',
-                    marginBottom: '1rem'
+                    marginBottom: '0.5rem'
                 }}>
                     <li style={{ margin: '0 1rem' }}>
                         <a href="https://www.linkedin.com/in/gracendo/" target="_blank" rel="noopener noreferrer">
@@ -108,6 +99,37 @@ function Hero({ fullpageRef, nightMode }: HeroProps) {
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div
+                className="spotify-banner"
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    maxWidth: 'min(10vw)',
+                    marginTop: '0',
+                    marginBottom: '0.75rem',
+                    padding: '0.15rem 0.2rem',
+                    background: 'transparent',
+                }}
+            >
+                <a
+                    id="spotify-link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        textDecoration: 'none',
+                        color: nightMode ? '#fff' : '#111',
+                        fontFamily: "'Lexend', 'Space Grotesk', Arial, sans-serif",
+                        fontSize: '0.8rem',
+                        fontWeight: 300,
+                    }}
+                >
+                    <div className="spotify-content" id="spotify-ticker">
+                        Loading Spotify data...
+                    </div>
+                </a>
             </div>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
